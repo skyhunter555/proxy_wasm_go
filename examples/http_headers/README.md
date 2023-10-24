@@ -35,3 +35,7 @@ wasm log: response header --> x-proxy-wasm-go-sdk-example: http_headers
 wasm log: response header --> x-wasm-header: demo-wasm
 wasm log: 2 finished
 ```
+
+# build
+
+CGO_ENABLED=0 tinygo build -o http_headers.wasm -scheduler=asyncify -tags=appengine -target=wasi main.go
